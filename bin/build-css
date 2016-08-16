@@ -1,0 +1,3 @@
+# Make a directory if it doesn't already exist (-p)
+
+mkdir -p test/output && node-sass --output-style compressed -o test/output test/scss

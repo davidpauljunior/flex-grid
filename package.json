@@ -1,0 +1,19 @@
+{
+  "name": "grid-system",
+  "version": "1.0.0",
+  "description": "A simple grid system using flexbox that falls back to floats if desired",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build-css": "./bin/build-css",
+    "watch-css": "./bin/watch-css"
+  },
+  "author": "David Paul",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.10.0"
+  }
+}

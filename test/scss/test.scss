@@ -1,0 +1,9 @@
+@import "../../flex-grid.scss";
+
+.test {
+    @include grid-row();
+
+    &__hello {
+        @include grid-col(6);
+    }
+}
