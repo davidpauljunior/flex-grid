@@ -1,9 +1,9 @@
-@import "../../flex-grid.scss";
+@import "../../flex-grid";
 
-.test {
+.grid {
     @include grid-row();
 
-    &__hello {
+    &__item {
         @include grid-col(6);
     }
 }

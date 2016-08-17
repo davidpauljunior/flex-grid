@@ -1,0 +1,95 @@
+# Linter Options
+options:
+  merge-default-rules: false
+# File Options
+files:
+  include: './test/scss/**/*.s+(a|c)ss'
+# Rule Configuration
+rules:
+  # Formatting
+  brace-style:
+      - 2
+      -
+          style: 'stroustrup'
+          allow-single-line: true
+          space-before-bang: 2
+          space-after-bang:
+              - 2
+              -
+                  include: false
+  empty-line-between-blocks: 2
+  indentation:
+      - 2
+      -
+        size: 4
+  space-after-comma: 2
+  space-before-brace: 2
+  space-before-colon:
+    - 2
+    -
+      include: false
+  space-after-colon: 2
+  space-between-parens:
+    - 2
+    -
+      include: false
+  space-around-operator: 2
+  trailing-semicolon: 2
+
+  # Naming
+  clean-import-paths: 2
+  function-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+  mixin-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+
+  # Rules
+  no-empty-rulesets: 2
+  single-line-per-selector: 2
+  one-declaration-per-line: 2
+  no-qualifying-elements:
+    - 2
+    -
+      allow-element-with-id: false
+      allow-element-with-class: true # Pending: around 50 fixes needed
+      allow-element-with-attribute: true # Pending: around 50 fixes needed
+  nesting-depth:
+    - 2
+    -
+      max-depth: 6 # Pending: reduce, preferably to 3 or 4
+      bem-depth:
+        - 2
+        -
+          max-depth: 1
+  extends-before-mixins: 2
+  extends-before-declarations: 2
+  mixins-before-declarations: 2
+
+  # Units
+  no-invalid-hex: 2
+  no-color-keywords: 2
+  hex-length:
+    - 2
+    -
+      style: short
+  hex-notation:
+    - 2
+    -
+      style: lowercase
+  zero-unit:
+    - 2
+    -
+      include: false
+  shorthand-values:
+    - 2
+    -
+      allowed-shorthands:
+        - 1
+        - 2
+  no-trailing-zero: 2

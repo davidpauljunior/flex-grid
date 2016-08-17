@@ -1,3 +1,4 @@
 # Make a directory if it doesn't already exist (-p)
+# -o is the output
 
-mkdir -p test/output && node-sass --output-style compressed -o test/output test/scss
+mkdir -p test/output && node-sass --output-style compressed -o test/output test/scss -x "npm run sass-lint"

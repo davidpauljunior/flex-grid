@@ -8,12 +8,14 @@
   },
   "scripts": {
     "build-css": "./bin/build-css",
+    "sass-lint": "./bin/sass-lint",
     "watch-css": "./bin/watch-css"
   },
   "author": "David Paul",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^3.8.0",
-    "nodemon": "^1.10.0"
+    "nodemon": "^1.10.0",
+    "sass-lint": "^1.8.2"
   }
 }
