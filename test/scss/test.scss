@@ -1,9 +1,9 @@
-@import "../../flex-grid";
+@import "../../sass-flex-grid";
 
 .grid {
     @include grid-row();
 
     &__item {
-        @include grid-col(6);
+        @include grid-span(6, hi);
     }
 }
