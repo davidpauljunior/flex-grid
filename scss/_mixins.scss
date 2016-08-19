@@ -1,0 +1,70 @@
+@mixin grid-row($gutter: null) {
+    // @if $flex-fallback {
+    //     display: block;
+    //
+    //     &:before,
+    //     &:after {
+    //         content: ' ';
+    //         display: table;
+    //     }
+    //
+    //     &:after {
+    //         clear: both;
+    //     }
+    // }
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @if $gutter == null {
+        margin-left: -#{$gutter-width};
+        margin-right: -#{$gutter-width};
+    }
+
+    @else if $gutter != null and $gutter != 'no-gutter' {
+        @error #{$no-gutter-error-message};
+    }
+}
+
+@mixin grid-row-reverse {
+    flex-direction: row-reverse;
+}
+
+@mixin grid-span($size, $gutter: null) {
+    position: relative;
+    min-height: 1px;
+    width: 100%;
+
+    // @if $flex-fallback {
+    //     float: left;
+    //     width: percentage($size / $columns);
+    // }
+
+    @if type-of($size) == number {
+        flex: 0 0 percentage($size / $columns);
+        max-width: percentage($size / $columns); // Stops content overflowing in FF and IE
+    }
+
+    @else {
+        @error #{$size-error-message};
+    }
+
+    @if $gutter == null {
+        box-sizing: border-box;
+        padding-left: #{$gutter-width};
+        padding-right: #{$gutter-width};
+    }
+
+    @else if $gutter != null and $gutter != 'no-gutter' {
+        @error #{$no-gutter-error-message};
+    }
+}
+
+@mixin grid-push($size) {
+    left: percentage($size / $columns);
+}
+
+@mixin grid-pull($size) {
+    right: percentage($size / $columns);
+}

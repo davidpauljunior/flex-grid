@@ -1,9 +1,17 @@
-@import "../../sass-flex-grid";
+// Dependency
+@import "../../scss/sass-flex-grid";
 
-.grid {
+@import
+"variables",
+"mixins",
+"base";
+
+.test-grid {
     @include grid-row();
+    margin-bottom: $gutter-width * 2;
 
     &__item {
-        @include grid-span(6, hi);
+        @include create-columns($columns); // Columns comes from dependency variables
+        position: relative;
     }
 }

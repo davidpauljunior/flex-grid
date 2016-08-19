@@ -1,0 +1,16 @@
+@mixin create-columns ($columns) {
+    @for $i from 1 through ($columns) { // TODO: Make the cols more available?
+        &--#{$i} {
+            @include grid-span($i);
+
+            &:before {
+                content: '#{$i}';
+                display: block;
+                padding: $item-padding;
+                background-color: $item-bg;
+                color: $item-color;
+                text-align: center;
+            }
+        }
+    }
+}

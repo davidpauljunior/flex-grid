@@ -1,0 +1,7 @@
+// TODO: work out how the user can override stuff.  Map merging??
+
+$gutter-width: 0.5rem !default; // To do, allow this to be px, em/rem, or %.  Super flexible.
+$columns: 12 !default; // This should also have capability to be overriden, 12, 16, 24, whatever (even only)
+$flex-fallback: true !default;
+$size-error-message: 'The first parameter must be a number';
+$no-gutter-error-message: 'The second, optional parameter only accepts \'no-gutter\' as it\'s parameter';
