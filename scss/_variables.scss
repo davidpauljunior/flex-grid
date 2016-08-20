@@ -5,3 +5,17 @@ $columns: 12 !default; // This should also have capability to be overriden, 12, 
 $flex-fallback: true !default;
 $size-error-message: 'The first parameter must be a number';
 $no-gutter-error-message: 'The second, optional parameter only accepts \'no-gutter\' as it\'s parameter';
+$selectors: true !default; // Exposes the grid in specified classnames
+$grid-row-class: 'row';
+$grid-span-class: 'span';
+$class-name-separator: '-'; // TODO as improvement?
+
+// TODO: Need to create a map of grid-mqs that will be passed into the creation of span classnames
+
+$grid-breakpoints: {
+    xs: 320px,
+    sm: 480px,
+    md: 640px,
+    lg: 980px,
+    xl: 1200px
+}

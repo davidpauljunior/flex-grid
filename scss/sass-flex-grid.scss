@@ -1,3 +1,16 @@
 @import
 "variables",
 "mixins";
+
+@if $selectors {
+    .#{$grid-row-class} {
+        @include grid-row();
+    }
+
+    .#{$grid-row-class}-no-gutter {
+        @include grid-row(no-gutter);
+    }
+
+    // TODO: Needs to expose media queries? How to handle and keep this neutral?
+    @include _create-span-classnames($grid-span-class);
+}

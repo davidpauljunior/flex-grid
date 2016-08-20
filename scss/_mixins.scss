@@ -68,3 +68,11 @@
 @mixin grid-pull($size) {
     right: percentage($size / $columns);
 }
+
+@mixin _create-span-classnames($class) { // imagine this is 'span'
+    @for $i from 1 through ($columns) {
+        .#{$class}#{$class-name-separator}#{$i} {
+            @include grid-span($i)
+        }
+    }
+}
