@@ -10,12 +10,38 @@ $grid-row-class: 'row';
 $grid-span-class: 'span';
 $class-name-separator: '-'; // TODO as improvement?
 
-// TODO: Need to create a map of grid-mqs that will be passed into the creation of span classnames
+// TODO: Need to merge this map of grid-mqs that will be passed into the creation of span classnames
+// It'll merge with the map that the app creates (if they create one) and spit out each map item part of a class name.
 
-$grid-breakpoints: {
-    xs: 320px,
-    sm: 480px,
-    md: 640px,
-    lg: 980px,
-    xl: 1200px
+$grid-config: () !default;
+$grid-breakpoints: () !default;
+
+// Need a function that returns a map with all the config needed
+
+@function grid($gutter-width, $columns, $config: $config) {
+
 }
+
+// SUSY FUNCTION FOR MAP MERGE
+//
+// @function susy-get(
+//   $key,
+//   $layout: map-merge($susy-defaults, $susy)
+// ) {
+//   $layout: parse-grid($layout);
+//   $_options: $layout $susy $susy-defaults;
+//   $_break: false;
+//   $_return: null;
+//
+//   @each $opt in $_options {
+//     @if type-of($opt) == map and not($_break) {
+//       $_keyset: _susy-deep-has-key($opt, $key...);
+//       @if $_keyset {
+//         $_return: _susy-deep-get($opt, $key...);
+//         $_break: true;
+//       }
+//     }
+//   }
+//
+//   @return $_return;
+// }
